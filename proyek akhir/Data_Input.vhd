@@ -30,6 +30,7 @@ architecture rtl of Data_Input is
     signal Slot1, Slot2, Slot3 : std_logic_vector(2 downto 0);
 
 begin
+    --menentukan state
     process(Present, CLK)
 begin
     if(rising_edge(CLK)) then 
@@ -37,13 +38,15 @@ begin
     elsif(reset = '1') then 
         Present <= S3;
     end if;
-
 end process;
-    process (Present, CLK, Top_up)
-        variable costCoin : integer := 1000;
-        variable Gain : integer := 0;
-        variable Coin : integer := 0;
-        variable Balance : integer;
+
+    --Main process
+    process (Present, CLK, Slot1, Slot2, Slot3)
+        variable costCoin : integer := 1000; --harga/coin
+        variable Gain : integer := 0; --perolehan hadiah
+        variable Coin : integer := 0; --jumlah coin
+        variable Balance : integer; --untuk top-up
+
         variable acak1 : positive := 4;
         variable acak2 : positive := 7;
         variable acak3 : positive := 11;
@@ -57,33 +60,35 @@ end process;
                     Gain := Gain + Balance mod costCoin;
                     Balance := 0;
                     Next_State <= S0;
+                    
                 else
                     if(Coin <= 0) then
-                        COin := 0;
+                        Coin := 0;
                         Next_State <= S3;
                     else 
-                        Coin := Coin - 1;
-                        acak1 := acak1 + acak2 + gain;
-                        acak2 := acak2 + acak3 + Coin;
-                        acak3 := acak3 + acak2;
+                        acak1 := acak1 + gain;
+                        acak2 := acak2 + acak1 + Coin;
+                        acak3 := acak3 + acak2 + acak1 + Coin + gain;
                         Next_State <= S1;
                     end if;
-                    report "Sisa Coin anda : " & integer'image(Coin);
-                    report "Gain saat ini : " & integer'image(Gain);
                 end if;
 
                 when S1 =>
                     Slot1 <= rand(acak1, acak2);
-                    Slot2 <= rand(acak2, acak3);   
+                    Slot2 <= rand(acak2, acak3);
                     Slot3 <= rand(acak3, acak1);
                     Next_State <= S2;
                     
                 when S2 =>
-                    Gain := Gain + conclusion(checking(Slot1, Slot2, Slot3));
+                    Coin := Coin - 1;
+                    report "Gain saat ini : " & integer'image(Gain);
+                    report "Sisa Coin anda : " & integer'image(Coin);
+                    Gain := Gain + conclusion(checking(Slot1, Slot2, Slot3)); -- output integer
                     Next_State <= S0;                
                 
                 when others =>
                     Coin := 0;
+                    Balance := 0;
                     Next_State <= S0;
                     Get_Prize <= Gain;
                     report "Terima kasih telah bermain";
