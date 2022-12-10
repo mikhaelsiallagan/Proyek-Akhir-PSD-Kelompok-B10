@@ -44,7 +44,7 @@ Jika 3 angka yang sama adalah :
 
 ---
 ## State Diagram
-![Slot Machine State Diagram](statediagram.jpg)
+![statediagram](https://user-images.githubusercontent.com/88538229/206860041-88f973f3-0943-4ca3-8995-e0db25f177d3.jpg)
 
 ---
 ## Function Snippets
@@ -58,7 +58,6 @@ Jika 3 angka yang sama adalah :
 > Melakukan perhitungan keuntungan yang didapatkan pemain berdasarkan nilai dari function checking serta menampilkan pesan yang berhubungan dengan keuntungan dari pemain.
 
 ---
-
 
 
 
