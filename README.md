@@ -1,8 +1,8 @@
 # 🎰 SLOT MACHINE
-> Program ini sebagai salah satu syarat pemenuhan tugas dalam praktikum Perancangan Sistem Digital Jurusan Teknik Komputer Universitas Indonesia
+> This program is one of the requirements for fulfilling assignments in the Digital Systems Design practicum, Department of Computer Engineering, University of Indonesia
 ---
 ## About
-Program slot machine ini merupakan program yang mengimplementasi bahasa VHDL yang berfungsi seperti layaknya slot machine pada dunia nyata. Program ini dibuat oleh kelompok B10 yang beranggotakan :
+This slot machine program is a progam that implements VHDL language. This program is made by group B10 which consists of : 
 
 - Rezki Muhammad - 2106731516
 - Muhammad Suhaili - 2106731535
@@ -10,57 +10,51 @@ Program slot machine ini merupakan program yang mengimplementasi bahasa VHDL yan
 - Nevanda Fairuz Pahlevi - 2106731541
 ---
 ## Description
-Program slot machine ini terdiri dari 3 reels yang masing-masing nya mempunyai 7 angka. Saat dimainkan, maka reels akan me-_generate_ angka random yang akan ditampilkan. Saat angka di _generate_ dan ditampilkan, program akan memunculkan pesan text yang sesuai dengan hasil yang didapatkan. Pemain dapat terus memainkan slot machine sampai koin yang dipunyai habis.
+This slot machine program consists of 3 reels, each of which has 7 numbers. When played, the reels will generate random numbers that will be displayed. When the numbers are generated and displayed, the program will generate a text message corresponding to the results obtained. Players can continue to play the slot machine until the coins they have run out.
 
 ---
 ## Features
-- Layanan Top Up dan Balance
+- Top Up and Balance service
 
-Program ini memiliki fitur yang memungkinkan pemain untuk melakukan top up dengan harga 1000 per koin sebelum memainkan slot machine. Kemudian dari koin yang didapatkan, pemain dapat menggunakan slot machine dengan 1 koin per 1 kali main. Apabila koin yang dimiliki sudah habis, maka akan muncul pesan yang menandakan bahwa pemain sudah selesai memainkan slot machine tersebut.
+This program has a feature that allows players to top up at a price of 1000 per coin before playing a slot machine. Then from the coins obtained, players can use the slot machine with 1 coin per 1 play. If the coins they have run out, a message will appear indicating that the player has finished playing the slot machine.
 
-- Pesan Report atas Keuntungan yang didapatkan
+- Report message based on the player's profit
 
-Saat koin dimasukkan dan slot dimainkan kemudian keluar hasil dari angka yang keluar, maka program akan mengeluarkan text pesan yang menampilkan keuntungan yang didapatkan oleh pemain.
+When a coin is inserted and the numbers come out, the program will issue a text message displaying the profit the player has gotten.
 
 ---
 ## Winning Mechanism
-Setiap reels akan me-_generate_ angka dari 1-7. Adapun semakin tinggi nilai angka, maka value nya akan semakin besar yang akan berpengaruh kepada keuntungan yang didapatkan pemain. 
+Each reels will generate a number from 1 to 7. As for the higher the value of the number, the value will be even greater which will affect the profit that players get. 
 
-> Keuntungan yang didapatkan pemain adalah 500 * multiplier.
+> Profits that the player will get is  500 * multiplier.
 
-Jika 2 angka yang sama adalah : 
+If the number that appears 2 times is : 
 
-- 1, 2 atau 3 : multiplier bernilai 1
-- 4 atau 5    : multiplier bernilai 2
-- 6 : multiplier bernilai 3
-- 7 : multiplier bernilai 4
+- 1, 2 atau 3 : multiplier is equal to 1
+- 4 atau 5    : multiplier is equal to 2
+- 6 : multiplier is equal to 3
+- 7 : multiplier is equal to 4
 
-Jika 3 angka yang sama adalah : 
-- 1 atau 2 : multiplier bernilai 2
-- 3 atau 4 : multiplier bernilai 3
-- 5 : multiplier bernilai 4
-- 6 : multiplier bernilai 10
-- 7 : multiplier bernilai 100
+Jika the number that appears 3 times is : 
+- 1 atau 2 : multiplier is equal to 2
+- 3 atau 4 : multiplier is equal to 3
+- 5 : multiplier is equal to 4
+- 6 : multiplier is equal to 10
+- 7 : multiplier is equal to 100
 
 ---
 ## State Diagram
-![statediagram](https://user-images.githubusercontent.com/88538229/206860041-88f973f3-0943-4ca3-8995-e0db25f177d3.jpg)
+![statediagram](https://user-images.githubusercontent.com/88538229/206861582-0e355f1c-9190-414b-b611-d4ab1b335801.jpg)
 
 ---
 ## Function Snippets
 ```function rand(seed1, seed2 : positive) return std_logic_vector;```
-> Melakukan randomisasi dari angka yang nantinya akan digunakan untuk masing-masing reels
+> Randomize the numbers that will be used for each reel
 
 ```function checking(sym1, sym2, sym3 : std_logic_vector(2 downto 0)) return integer;```
-> Melakukan pengecekan apakah ada angka yang sama pada reels setelah pemain memainkan slot
+> Checks whether there are numbers that appears twice or thrice on the reels after the player plays the slot
 
 ```function conclusion(checker : integer) return positive;```
-> Melakukan perhitungan keuntungan yang didapatkan pemain berdasarkan nilai dari function checking serta menampilkan pesan yang berhubungan dengan keuntungan dari pemain.
+> Performs calculations of the player's profit based on the value that returned by the checking function and displays messages related to the player's profit.
 
 ---
-
-
-
-
-
-
