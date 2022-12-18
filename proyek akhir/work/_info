@@ -10,13 +10,13 @@ z2
 cModel Technology
 dC:/PSD_Sem3/Modul9
 Edata_input
-Z0 w1670589524
-Z1 DPx4 work 13 slot_function 0 22 4=KQGg>R2C`m1TonXPcgN0
+Z0 w1671371757
+Z1 DPx4 work 13 slot_function 0 22 ;nG<Zdci6J>CmAjb`L0:32
 Z2 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 181
+!i122 252
 Z6 dC:/PSD_Sem3/proyek akhir
 Z7 8C:/PSD_Sem3/proyek akhir/Data_Input.vhd
 Z8 FC:/PSD_Sem3/proyek akhir/Data_Input.vhd
@@ -26,9 +26,9 @@ Ve5^DQzDmZTG[3a[SN^3?F0
 !s100 4zhbX:e@AVXAIFj;WEBNO0
 Z9 OV;C;2020.1;71
 32
-Z10 !s110 1670589535
+Z10 !s110 1671371967
 !i10b 1
-Z11 !s108 1670589535.000000
+Z11 !s108 1671371967.000000
 Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/PSD_Sem3/proyek akhir/Data_Input.vhd|
 Z13 !s107 C:/PSD_Sem3/proyek akhir/Data_Input.vhd|
 !i113 1
@@ -41,11 +41,11 @@ R3
 R4
 R5
 Z16 DEx4 work 10 data_input 0 22 e5^DQzDmZTG[3a[SN^3?F0
-!i122 181
-l32
-Z17 L18 76
-Vj=880VUz@SZfUbOh:Y9oW1
-!s100 O:6E0o`Chcj;8hOSSn?i82
+!i122 252
+l36
+L18 97
+Vd382Ti;Ikk[2figBRPgDO1
+!s100 47Daa5Z24XT]Ja?fE0UC[2
 R9
 32
 R10
@@ -61,23 +61,23 @@ R2
 R3
 R4
 R5
-!i122 153
-Z18 w1670585550
+!i122 233
+Z17 w1671368507
 R6
-Z19 8C:/PSD_Sem3/proyek akhir/Slot_Function.vhd
-Z20 FC:/PSD_Sem3/proyek akhir/Slot_Function.vhd
+Z18 8C:/PSD_Sem3/proyek akhir/Slot_Function.vhd
+Z19 FC:/PSD_Sem3/proyek akhir/Slot_Function.vhd
 l0
 L6 1
-V4=KQGg>R2C`m1TonXPcgN0
-!s100 IV@I]C?3PR_;1O[i^cE1d1
+V;nG<Zdci6J>CmAjb`L0:32
+!s100 TU4:DMXOL<ORb7jlL:UXd0
 R9
 32
 b1
-Z21 !s110 1670585747
+Z20 !s110 1671368519
 !i10b 1
-Z22 !s108 1670585747.000000
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/PSD_Sem3/proyek akhir/Slot_Function.vhd|
-Z24 !s107 C:/PSD_Sem3/proyek akhir/Slot_Function.vhd|
+Z21 !s108 1671368519.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/PSD_Sem3/proyek akhir/Slot_Function.vhd|
+Z23 !s107 C:/PSD_Sem3/proyek akhir/Slot_Function.vhd|
 !i113 1
 R14
 R15
@@ -87,65 +87,65 @@ R2
 R3
 R4
 R5
-!i122 153
+!i122 233
 l0
-L13 1
-V_hVkQ_UdRWK;R5;cOLogg3
-!s100 TUGhmg1=KUCn@j;eO0K7o0
+L16 1
+Vbab6c4NOAoi35HN]7U:OR1
+!s100 >6eUk74OJzQiF8[lRU]]=1
 R9
 32
-R21
+R20
 !i10b 1
+R21
 R22
 R23
-R24
 !i113 1
 R14
 R15
 Etb_slotmachine
-Z25 w1670575746
-Z26 DPx4 work 13 slot_function 0 22 UE@0kVM5ICnN_P_Z>MZYD0
+Z24 w1670596173
+Z25 DPx4 work 13 slot_function 0 22 ABCiUj<l3CC0a_hMgXH`e0
 R2
 R3
 R4
 R5
-!i122 106
+!i122 187
 R6
-Z27 8C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd
-Z28 FC:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd
+Z26 8C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd
+Z27 FC:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd
 l0
 L7 1
 Vc3?M2k4HoT9hXM=70e3Zc1
 !s100 N`c25cgboUD_kF2AmC4Pf0
 R9
 32
-Z29 !s110 1670580494
+Z28 !s110 1670596179
 !i10b 1
-Z30 !s108 1670580494.000000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd|
-Z32 !s107 C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd|
+Z29 !s108 1670596179.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd|
+Z31 !s107 C:/PSD_Sem3/proyek akhir/tb_slotmachine.vhd|
 !i113 1
 R14
 R15
 Artl
-R26
+R25
 R2
 R3
 R4
 R5
 DEx4 work 14 tb_slotmachine 0 22 c3?M2k4HoT9hXM=70e3Zc1
-!i122 106
+!i122 187
 l23
-L10 21
-V<X:^oY`LF;6C?d?`o=i8b0
-!s100 3dCR??oELazHQ0jbNo6Be3
+L10 22
+Vg9cg0AP7VI3ae^BAQK6HI1
+!s100 `L42e6IeobmAF@gGN3eMZ1
 R9
 32
-R29
+R28
 !i10b 1
+R29
 R30
 R31
-R32
 !i113 1
 R14
 R15

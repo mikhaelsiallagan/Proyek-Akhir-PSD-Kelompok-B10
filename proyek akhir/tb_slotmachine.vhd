@@ -9,7 +9,7 @@ end entity tb_slotmachine;
 
 architecture rtl of tb_slotmachine is
     signal Top_up    : integer range 0 to 10000;
-    signal reset       : std_logic;
+    signal reset, CLK       : std_logic;
     signal Get_Prize    : integer;
 
     component Data_input is
@@ -25,6 +25,7 @@ begin
     port map (
         Top_up => Top_up,
         reset => reset,
+        CLK => CLK,
         Get_Prize => Get_Prize
     );
 end architecture;

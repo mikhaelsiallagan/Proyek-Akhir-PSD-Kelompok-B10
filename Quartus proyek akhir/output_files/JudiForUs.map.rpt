@@ -1,0 +1,771 @@
+Analysis & Synthesis report for JudiForUs
+Sun Dec 18 21:32:01 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |JudiForUs|Present
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 18 21:32:01 2022       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                   ; JudiForUs                                   ;
+; Top-level Entity Name           ; JudiForUs                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 4                                           ;
+; Total pins                      ; 48                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; JudiForUs          ; JudiForUs          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+; Slot_Function.vhd                ; yes             ; User VHDL File               ; C:/PSD_Sem3/Quartus proyek akhir/Slot_Function.vhd            ;         ;
+; judiforus.vhd                    ; yes             ; Auto-Found VHDL File         ; C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; e:/psd_cs/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; e:/psd_cs/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; e:/psd_cs/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                 ; e:/psd_cs/quartus/libraries/megafunctions/aglobal211.inc      ;         ;
+; db/lpm_divide_65m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/lpm_divide_65m.tdf        ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/sign_div_unsign_9nh.tdf   ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/alt_u_div_o2f.tdf         ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/lpm_divide_vcm.tdf        ;         ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/sign_div_unsign_5nh.tdf   ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/PSD_Sem3/Quartus proyek akhir/db/alt_u_div_g2f.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 272         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 518         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 24          ;
+;     -- 5 input functions                    ; 45          ;
+;     -- 4 input functions                    ; 74          ;
+;     -- <=3 input functions                  ; 375         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 4           ;
+;                                             ;             ;
+; I/O pins                                    ; 48          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; LessThan0~3 ;
+; Maximum fan-out                             ; 47          ;
+; Total fan-out                               ; 1728        ;
+; Average fan-out                             ; 2.80        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |JudiForUs                             ; 518 (266)           ; 4 (4)                     ; 0                 ; 0          ; 48   ; 0            ; |JudiForUs                                                                                                 ; JudiForUs           ; work         ;
+;    |lpm_divide:Div0|                   ; 112 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_vcm:auto_generated|  ; 112 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
+;          |sign_div_unsign_5nh:divider| ; 112 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;             |alt_u_div_g2f:divider|    ; 112 (112)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
+;    |lpm_divide:Mod0|                   ; 140 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_65m:auto_generated|  ; 140 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;          |sign_div_unsign_9nh:divider| ; 140 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;             |alt_u_div_o2f:divider|    ; 140 (140)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |JudiForUs|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |JudiForUs|Present                             ;
++------------+------------+------------+------------+------------+
+; Name       ; Present.S0 ; Present.S2 ; Present.S1 ; Present.S3 ;
++------------+------------+------------+------------+------------+
+; Present.S3 ; 0          ; 0          ; 0          ; 0          ;
+; Present.S1 ; 0          ; 0          ; 1          ; 1          ;
+; Present.S2 ; 0          ; 1          ; 0          ; 1          ;
+; Present.S0 ; 1          ; 0          ; 0          ; 1          ;
++------------+------------+------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Get_Prize[0]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[1]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[2]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[3]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[4]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[5]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[6]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[7]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[8]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[9]$latch                                  ; Present.S3          ; yes                    ;
+; Get_Prize[10]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[11]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[12]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[13]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[14]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[15]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[16]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[17]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[18]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[19]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[20]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[21]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[22]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[23]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[24]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[25]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[26]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[27]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[28]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[29]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[30]$latch                                 ; Present.S3          ; yes                    ;
+; Get_Prize[31]$latch                                 ; Present.S3          ; yes                    ;
+; Gain[0]                                             ; Selector4           ; yes                    ;
+; Gain[1]                                             ; Selector4           ; yes                    ;
+; Gain[2]                                             ; Gain[31]            ; yes                    ;
+; Gain[3]                                             ; Gain[31]            ; yes                    ;
+; Gain[4]                                             ; Gain[31]            ; yes                    ;
+; Gain[5]                                             ; Gain[31]            ; yes                    ;
+; Gain[6]                                             ; Gain[31]            ; yes                    ;
+; Gain[7]                                             ; Gain[31]            ; yes                    ;
+; Gain[8]                                             ; Gain[31]            ; yes                    ;
+; Gain[9]                                             ; Gain[31]            ; yes                    ;
+; Gain[10]                                            ; Gain[31]            ; yes                    ;
+; Gain[11]                                            ; Gain[31]            ; yes                    ;
+; Gain[12]                                            ; Gain[31]            ; yes                    ;
+; Gain[13]                                            ; Gain[31]            ; yes                    ;
+; Gain[14]                                            ; Gain[31]            ; yes                    ;
+; Gain[15]                                            ; Gain[31]            ; yes                    ;
+; Gain[16]                                            ; Gain[31]            ; yes                    ;
+; Gain[17]                                            ; Gain[31]            ; yes                    ;
+; Gain[18]                                            ; Gain[31]            ; yes                    ;
+; Gain[19]                                            ; Gain[31]            ; yes                    ;
+; Gain[20]                                            ; Gain[31]            ; yes                    ;
+; Gain[21]                                            ; Gain[31]            ; yes                    ;
+; Gain[22]                                            ; Gain[31]            ; yes                    ;
+; Gain[23]                                            ; Gain[31]            ; yes                    ;
+; Gain[24]                                            ; Gain[31]            ; yes                    ;
+; Gain[25]                                            ; Gain[31]            ; yes                    ;
+; Gain[26]                                            ; Gain[31]            ; yes                    ;
+; Gain[27]                                            ; Gain[31]            ; yes                    ;
+; Gain[28]                                            ; Gain[31]            ; yes                    ;
+; Gain[29]                                            ; Gain[31]            ; yes                    ;
+; Gain[30]                                            ; Gain[31]            ; yes                    ;
+; Gain[31]                                            ; Gain[31]            ; yes                    ;
+; Coin[12]                                            ; Selector1           ; yes                    ;
+; Coin[13]                                            ; Selector1           ; yes                    ;
+; Coin[14]                                            ; Selector1           ; yes                    ;
+; Coin[15]                                            ; Selector1           ; yes                    ;
+; Coin[16]                                            ; Selector1           ; yes                    ;
+; Coin[17]                                            ; Selector1           ; yes                    ;
+; Coin[18]                                            ; Selector1           ; yes                    ;
+; Coin[19]                                            ; Selector1           ; yes                    ;
+; Coin[20]                                            ; Selector1           ; yes                    ;
+; Coin[21]                                            ; Selector1           ; yes                    ;
+; Coin[22]                                            ; Selector1           ; yes                    ;
+; Coin[23]                                            ; Selector1           ; yes                    ;
+; Coin[24]                                            ; Selector1           ; yes                    ;
+; Coin[25]                                            ; Selector1           ; yes                    ;
+; Coin[26]                                            ; Selector1           ; yes                    ;
+; Coin[27]                                            ; Selector1           ; yes                    ;
+; Coin[28]                                            ; Selector1           ; yes                    ;
+; Coin[29]                                            ; Selector1           ; yes                    ;
+; Coin[30]                                            ; Selector1           ; yes                    ;
+; Coin[11]                                            ; Selector1           ; yes                    ;
+; Coin[10]                                            ; Selector1           ; yes                    ;
+; Coin[9]                                             ; Selector1           ; yes                    ;
+; Coin[8]                                             ; Selector1           ; yes                    ;
+; Coin[7]                                             ; Selector1           ; yes                    ;
+; Coin[6]                                             ; Selector1           ; yes                    ;
+; Coin[5]                                             ; Selector1           ; yes                    ;
+; Coin[4]                                             ; Selector1           ; yes                    ;
+; Coin[3]                                             ; Selector1           ; yes                    ;
+; Coin[2]                                             ; Selector1           ; yes                    ;
+; Coin[1]                                             ; Selector1           ; yes                    ;
+; Coin[0]                                             ; Selector1           ; yes                    ;
+; Coin[31]                                            ; Selector1           ; yes                    ;
+; Number of user-specified and inferred latches = 96  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |JudiForUs|Next_State.S3   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |JudiForUs|Coin[31]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |JudiForUs|Coin[1]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                ;
+; LPM_WIDTHD             ; 14             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 4                           ;
+;     CLR               ; 4                           ;
+; arriav_lcell_comb     ; 518                         ;
+;     arith             ; 189                         ;
+;         0 data inputs ; 26                          ;
+;         1 data inputs ; 59                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 28                          ;
+;     normal            ; 307                         ;
+;         2 data inputs ; 82                          ;
+;         3 data inputs ; 110                         ;
+;         4 data inputs ; 46                          ;
+;         5 data inputs ; 45                          ;
+;         6 data inputs ; 24                          ;
+;     shared            ; 22                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 20                          ;
+; boundary_port         ; 48                          ;
+;                       ;                             ;
+; Max LUT depth         ; 18.60                       ;
+; Average LUT depth     ; 11.79                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Sun Dec 18 21:31:52 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off JudiForUs -c JudiForUs
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 0 entities, in source file slot_function.vhd
+    Info (12022): Found design unit 1: Slot_Function File: C:/PSD_Sem3/Quartus proyek akhir/Slot_Function.vhd Line: 6
+    Info (12022): Found design unit 2: Slot_Function-body File: C:/PSD_Sem3/Quartus proyek akhir/Slot_Function.vhd Line: 16
+Warning (12019): Can't analyze file -- file Data_Input.vhd is missing
+Warning (12125): Using design file judiforus.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: JudiForUs-rtl File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 18
+    Info (12023): Found entity 1: JudiForUs File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 9
+Info (12127): Elaborating entity "JudiForUs" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at judiforus.vhd(32): object "see_coin" assigned a value but never read File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 32
+Warning (10036): Verilog HDL or VHDL warning at judiforus.vhd(33): object "see_gain" assigned a value but never read File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at judiforus.vhd(40): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 40
+Warning (10542): VHDL Variable Declaration warning at judiforus.vhd(49): used initial value expression for variable "costCoin" because variable was never assigned a value File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at judiforus.vhd(64): signal "Slot" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at judiforus.vhd(69): signal "Top_up" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 69
+Warning (10542): VHDL Variable Declaration warning at Slot_Function.vhd(19): used initial value expression for variable "r" because variable was never assigned a value File: C:/PSD_Sem3/Quartus proyek akhir/Slot_Function.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "Coin", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "Gain", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "Slot", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "acak1", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "acak2", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "acak3", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Warning (10631): VHDL Process Statement warning at judiforus.vhd(48): inferring latch(es) for signal or variable "Get_Prize", which holds its previous value in one or more paths through the process File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[3]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[4]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[5]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[6]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[7]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[8]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[9]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[10]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[11]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[12]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[13]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[14]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[15]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[16]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[17]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[18]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[19]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[20]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[21]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[22]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[23]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[24]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[25]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[26]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[27]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[28]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[29]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[30]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Get_Prize[31]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[0][0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[0][1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[0][2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[1][0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[1][1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[1][2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[2][0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[2][1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Slot[2][2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[3]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[4]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[5]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[6]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[7]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[8]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[9]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[10]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[11]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[12]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[13]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[14]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[15]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[16]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[17]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[18]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[19]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[20]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[21]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[22]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[23]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[24]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[25]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[26]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[27]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[28]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[29]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[30]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Gain[31]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[0]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[1]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[2]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[3]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[4]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[5]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[6]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[7]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[8]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[9]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[10]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[11]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[12]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[13]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[14]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[15]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[16]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[17]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[18]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[19]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[20]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[21]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[22]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[23]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[24]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[25]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[26]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[27]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[28]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[29]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[30]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (10041): Inferred latch for "Coin[31]" at judiforus.vhd(48) File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 74
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 73
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 74
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 74
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
+    Info (12023): Found entity 1: lpm_divide_65m File: C:/PSD_Sem3/Quartus proyek akhir/db/lpm_divide_65m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/PSD_Sem3/Quartus proyek akhir/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/PSD_Sem3/Quartus proyek akhir/db/alt_u_div_o2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 73
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 73
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm File: C:/PSD_Sem3/Quartus proyek akhir/db/lpm_divide_vcm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/PSD_Sem3/Quartus proyek akhir/db/sign_div_unsign_5nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info (12023): Found entity 1: alt_u_div_g2f File: C:/PSD_Sem3/Quartus proyek akhir/db/alt_u_div_g2f.tdf Line: 23
+Warning (13012): Latch Gain[2] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[3] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[4] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[5] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[6] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[7] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[8] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[9] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[10] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[11] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[12] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[13] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[14] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[15] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[16] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[17] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[18] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[19] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[20] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[21] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[22] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[23] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[24] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[25] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[26] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[27] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[28] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[29] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[30] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Gain[31] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[12] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[13] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[14] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[15] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[16] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[17] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[18] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[19] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[20] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[21] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[22] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[23] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[24] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[25] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[26] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[27] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[28] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[29] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[30] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[11] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[10] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[9] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[8] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[7] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[6] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[5] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[4] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[3] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[2] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[1] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[0] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Warning (13012): Latch Coin[31] has unsafe behavior File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 48
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Present.S0 File: C:/PSD_Sem3/Quartus proyek akhir/judiforus.vhd Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 567 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 519 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
+    Info: Peak virtual memory: 4904 megabytes
+    Info: Processing ended: Sun Dec 18 21:32:01 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
+
+

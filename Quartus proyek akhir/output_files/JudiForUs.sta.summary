@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'Top_up[0]'
+Slack : -11.422
+TNS   : -525.365
+
+Type  : Slow 1100mV 85C Model Setup 'CLK'
+Slack : -8.601
+TNS   : -20.502
+
+Type  : Slow 1100mV 85C Model Setup 'Present.S3'
+Slack : -6.608
+TNS   : -191.897
+
+Type  : Slow 1100mV 85C Model Hold 'CLK'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Top_up[0]'
+Slack : 1.186
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Present.S3'
+Slack : 3.203
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.724
+TNS   : -4.430
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Top_up[0]'
+Slack : -0.135
+TNS   : -1.169
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Present.S3'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'Top_up[0]'
+Slack : -11.158
+TNS   : -525.760
+
+Type  : Slow 1100mV 0C Model Setup 'CLK'
+Slack : -8.317
+TNS   : -19.696
+
+Type  : Slow 1100mV 0C Model Setup 'Present.S3'
+Slack : -6.603
+TNS   : -191.089
+
+Type  : Slow 1100mV 0C Model Hold 'CLK'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Top_up[0]'
+Slack : 1.188
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Present.S3'
+Slack : 3.034
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.724
+TNS   : -4.431
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Top_up[0]'
+Slack : -0.207
+TNS   : -3.789
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Present.S3'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'Top_up[0]'
+Slack : -4.779
+TNS   : -203.788
+
+Type  : Fast 1100mV 85C Model Setup 'CLK'
+Slack : -4.037
+TNS   : -9.738
+
+Type  : Fast 1100mV 85C Model Setup 'Present.S3'
+Slack : -2.805
+TNS   : -81.952
+
+Type  : Fast 1100mV 85C Model Hold 'CLK'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Top_up[0]'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Present.S3'
+Slack : 2.160
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Top_up[0]'
+Slack : -0.340
+TNS   : -14.809
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -0.085
+TNS   : -0.337
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Present.S3'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'Top_up[0]'
+Slack : -4.159
+TNS   : -177.149
+
+Type  : Fast 1100mV 0C Model Setup 'CLK'
+Slack : -3.589
+TNS   : -8.422
+
+Type  : Fast 1100mV 0C Model Setup 'Present.S3'
+Slack : -2.623
+TNS   : -76.873
+
+Type  : Fast 1100mV 0C Model Hold 'CLK'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Top_up[0]'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Present.S3'
+Slack : 2.071
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Top_up[0]'
+Slack : -0.272
+TNS   : -11.850
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -0.086
+TNS   : -0.343
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Present.S3'
+Slack : 0.343
+TNS   : 0.000
+
+------------------------------------------------------------

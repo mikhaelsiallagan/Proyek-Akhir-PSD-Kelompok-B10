@@ -1,0 +1,7 @@
+
+State Machine - |JudiForUs|Present
+Name Present.S0 Present.S2 Present.S1 Present.S3 
+Present.S3 0 0 0 0 
+Present.S1 0 0 1 1 
+Present.S2 0 1 0 1 
+Present.S0 1 0 0 1 

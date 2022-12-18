@@ -1,0 +1,201 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Get_Prize[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Get_Prize[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Top_up[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
