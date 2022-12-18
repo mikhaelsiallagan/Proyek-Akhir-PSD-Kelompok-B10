@@ -62,3 +62,6 @@ If the number that appears 3 times is :
 > Performs calculations of the player's profit based on the value that returned by the checking function and displays messages related to the player's profit.
 
 ---
+
+## Youtube Link
+[Presentasi Proyek Akhir Kelompok B10](https://youtu.be/R-_aYtgIYIg)
